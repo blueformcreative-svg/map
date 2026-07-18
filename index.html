@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive State Map - Packages & Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- SimpleMap Library -->
+    <script src="/static/lib/simplemaps/simplemaps_usmap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Find Services Available in Your State</h1>
+            <p>Click on any state to view available packages and solutions</p>
+        </header>
+
+        <div class="map-section">
+            <!-- Map Container -->
+            <div id="map"></div>
+        </div>
+
+        <!-- Modal for Package Details -->
+        <div id="packageModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-header">
+                    <h2 id="stateName"></h2>
+                </div>
+                <div id="packagesContainer" class="packages-grid">
+                    <!-- Packages will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="mapdata.js"></script>
+    <script src="packages-data.js"></script>
+    <script src="map-interactive.js"></script>
+</body>
+</html>
